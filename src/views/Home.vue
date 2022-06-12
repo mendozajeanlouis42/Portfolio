@@ -8,7 +8,7 @@
           <br />
         </v-col>
         <v-col cols="5" style="height: 800px;">
-          <v-img class="" src="images/tester.png" contain max-height="450"></v-img>
+          <v-img class="" src="images/portrait.png" contain max-height="600"></v-img>
         </v-col>
         <v-col cols="5" offset-md="1">
           <h5 class="red--text text--darken-4 top">Hello Im Jean-Louis Mendoza</h5>
@@ -174,10 +174,13 @@
                   </v-col>
                 </v-row>
               </v-col>
+              <v-col sm="12" md="4" offset-md="2">
+                  <v-img class="" src="images/portrait.png" contain max-height="600"></v-img>
+              
+              </v-col>
             </v-row>
             <v-row>
               <v-col cols="3">
-
               </v-col>
             </v-row>
           </v-col>
@@ -258,7 +261,7 @@ export default {
 </script>
 <style scoped>
 .bg {
-  background-image: url("/images/bg.jpg");
+  background-image: url("/images/bg.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -555,24 +558,4 @@ body {
   --button-text-color-hover: #ece8e1;
   --button-bits-color-hover: #ece8e1;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </style>
