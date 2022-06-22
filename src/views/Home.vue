@@ -2,15 +2,16 @@
   <v-app id="home" class="bg">
     <nav-bar />
     <v-container fluid>
+      <FsLightbox :toggler="toggler" :sources="loadedPhotos" />
       <v-row>
         <v-col cols="12">
           <br />
           <br />
         </v-col>
-        <v-col cols="5" style="height: 800px;">
-          <v-img class="" src="images/portrait.png" contain max-height="600"></v-img>
+        <v-col sm="4" md="5" lg="5" style="height: 800px;">
+          <v-img class="" src="images/portrait2.png" contain max-height="600"></v-img>
         </v-col>
-        <v-col cols="5" offset-md="1">
+        <v-col sm="6" md="5" lg="5" offset-sm="1" offset-md="1">
           <h5 class="red--text text--darken-4 top">Hello Im Jean-Louis Mendoza</h5>
           <h1 class="tessss">
             <span class="text-nickname-container">
@@ -24,25 +25,25 @@
 
           </h1>
           <h1 class="white--text">Web Developer</h1>
-          <p class="grey--text" style="font-size:20px;">
-            Innovative, task-driven professional with 3+ years of <br />
-            experience in web development With a strong emphasis <br />
-            on "Progressive Enhancement", I look for creative ways to <br />
-            push the boundaries of website without compromise <br />
+          <p class="grey--text" style="">
+            Innovative, task-driven professional with 3+ years of
+            experience in web development with a strong emphasis
+            on "Progressive Enhancement", as I look for creative ways to
+            push the boundaries of website without compromise
           </p>
 
 
           <div>
             <v-row>
-              <v-col md="4">
+              <v-col md="6" style="text-align: center;">
                 <button class="btn btn--light" @click="scroll('about')">
                   <span class="btn__inner">
                     <span class="btn__slide"></span>
-                    <span class="btn__content">about me</span>
+                    <span class="btn__content">About me</span>
                   </span>
                 </button>
               </v-col>
-              <v-col md="5">
+              <v-col md="6">
                 <button class="btn">
                   <span class="btn__inner">
                     <span class="btn__slide"></span>
@@ -56,9 +57,9 @@
 
           </div>
         </v-col>
-        <v-col cols="12" class="padd"></v-col>
+        <v-col cols="12" class=""></v-col>
 
-        <v-col cols="12" class="padd">
+        <v-col cols="12" class="">
           <br />
           <v-row>
             <v-col cols="12" style=" height: 100px;">
@@ -80,7 +81,7 @@
 
 
         </v-col>
-        <v-col cols="12" style=" height: 300px;">
+        <v-col cols="12" style="">
           <br />
           <br />
         </v-col>
@@ -89,44 +90,62 @@
           <br />
         </div>
         <div class="second" id="">
-          <v-col cols="12" class="bgColor1">
+          <v-col sm="12" md="12" lg="12" class="bgColor1">
             <v-row>
-              <v-col cols="6" offset-md="3">
-                <div style="text-align: center; padding:10px; height: 200px;">
-                  <h4 class="white--text">Skills / Expertise</h4>
+              <v-col sm="12" md="6" lg="6" offset-md="3">
+                <div class="skillDiv" style="">
+                  <h4 class="white--text">Experiences</h4> <br/>
                   <center>
                     <v-row align="center" justify="center">
-                      <v-col cols="2">
+                      <v-col xs="1" sm="2" md="2" lg="2">
                         <v-img src="images/skills/html.svg" contain max-height="62" max-width="62"></v-img>
                       </v-col>
-                      <v-col cols="2">
+                      <v-col xs="1" sm="2" md="2" lg="2">
                         <v-img src="images/skills/css3.svg" contain max-height="62" max-width="62"></v-img>
                       </v-col>
-                      <v-col cols="2">
+                      <v-col xs="1" sm="2" md="2" lg="2">
                         <v-img src="images/skills/javascript.svg" contain max-height="62" max-width="62"></v-img>
                       </v-col>
-                      <v-col cols="2">
+                      <v-col xs="1" sm="2" md="2" lg="2">
                         <v-img src="images/skills/jquery.svg" contain max-height="62" max-width="62"></v-img>
                       </v-col>
-                      <v-col cols="2">
+                      <v-col xs="1" sm="2" md="2" lg="2">
                         <v-img src="images/skills/php.svg" contain max-height="62" max-width="62"></v-img>
                       </v-col>
-                      <v-col cols="2">
+                      <v-col xs="1" sm="2" md="2" lg="2">
                         <v-img src="images/skills/mysql.svg" contain max-height="62" max-width="62"></v-img>
                       </v-col>
-                      <v-col cols="2">
+                      <v-col xs="1" sm="2" md="2" lg="2">
                         <v-img src="images/skills/git.svg" contain max-height="62" max-width="62"></v-img>
                       </v-col>
-                      <v-col cols="2">
+                      <v-col xs="1" sm="2" md="2" lg="2">
                         <v-img src="images/skills/laravel.svg" contain max-height="62" max-width="62"></v-img>
                       </v-col>
-                      <v-col cols="2">
+                      <v-col xs="1" sm="2" md="2" lg="2">
+                        <v-img src="images/skills/react.svg" contain max-height="62" max-width="62"></v-img>
+                      </v-col>
+                      <v-col xs="1" sm="2" md="2" lg="2">
                         <v-img src="images/skills/vue.svg" contain max-height="62" max-width="62"></v-img>
+                      </v-col>
+                      <v-col xs="1" sm="2" md="2" lg="2">
+                        <v-img src="images/skills/vscode.svg" contain max-height="62" max-width="62"></v-img>
                       </v-col>
                     </v-row>
 
                   </center>
                 </div>
+              </v-col>
+            </v-row>
+            <v-row>
+              <v-col xs="1" sm="2" md="6" lg="6">
+                <p class="white--text">Service Class Business Logic Application</p>
+                <v-img src="images/skills/businesslogic.gif" contain
+                  @click="showImage('images/skills/businesslogic.gif')"></v-img>
+              </v-col>
+              <v-col xs="1" sm="2" md="6" lg="6">
+                <p class="white--text">DRY Approach</p>
+                <v-img src="images/skills/dry.png" contain
+                  @click="showImage('images/skills/dry.png')"></v-img>
               </v-col>
             </v-row>
           </v-col>
@@ -156,12 +175,14 @@
                   </v-col>
                   <v-col cols="12" class="mt-0 white--text">
                     <p>
-                      I started my Web Developer career as a System Developer at Synermaxx Corporation,
-                      guided by the best team on business tier coding practices in this company. Also interested
-                      in people where I can learn, share, compare, absorb best approaches in regards to web development.
+                      I started my web developer career as a System Developer at Synermaxx Corporation,
+                      where my tasks strongly involved in the backend development guided by the best team in this
+                      company. Also interested
+                      in people where I can learn, share, compare, to absorb best approaches in regards to web development.
                     </p>
                     <p>
-                      My hobbies are simply watching anime, do cosplay, get few shots for archery and cleaning.
+                      My hobbies are simply watching 🧑🏻‍anime, do 🦸‍♂️cosplay, get few shots for 🏹archery and maybe
+                      play 🎮edit/games once in awhile.
                     </p>
                   </v-col>
                   <v-col cols="12" class="ml-16">
@@ -175,8 +196,8 @@
                 </v-row>
               </v-col>
               <v-col sm="12" md="4" offset-md="2">
-                  <v-img class="" src="images/portrait.png" contain max-height="600"></v-img>
-              
+                <v-img class="" src="images/portrait1.png" contain max-height="600"></v-img>
+
               </v-col>
             </v-row>
             <v-row>
@@ -189,8 +210,8 @@
         <div class="" style="height: 900px;" id="">
         </div>
 
-        <v-col cols="12" class="padd topInverse">
-          <div class="second">
+        <v-col cols="12" class="padd topInverse" >
+          <div class="second" hidden >
             <div class="secondchild1" id="contact">
               <v-row>
                 <v-col cols="7">
@@ -218,12 +239,9 @@
                 margin-right: auto;
                 left: 0;
                 right: 0;
-                text-align: center;
+                text-align: left;
               ">
-              <v-btn text>Home</v-btn>
-              <v-btn text>Project</v-btn>
-              <v-btn text>About</v-btn>
-              <v-btn text>Contact</v-btn>
+              <p style="padding: 10px; font-size: 9px;">Portfolio in Development 2022 </p>
             </div>
           </v-toolbar>
         </v-col>
@@ -236,17 +254,25 @@
 import NavBar from "../components/Navbar.vue";
 import Projects from "../components/Projects.vue";
 import featuredProjects from "../data/projectsData";
-
+import FsLightbox from "fslightbox-vue";
 export default {
   name: "Home",
-  data: () => ({
-    icons: ["mdi-facebook", "mdi-twitter", "mdi-linkedin", "mdi-instagram"],
-    featuredProjects: featuredProjects,
 
-  }),
+  data() {
+    return {
+      featuredProjects: featuredProjects,
+      loadedPhotos: this.loadedPhotos,
+      toggler: false,
+    }
+  },
+  // data: () => ({
+  //   icons: ["mdi-facebook", "mdi-twitter", "mdi-linkedin", "mdi-instagram"],
+
+  // }),
   components: {
     NavBar,
     Projects,
+    FsLightbox,
 
     // Footer,
   },
@@ -255,11 +281,21 @@ export default {
       const element = document.getElementById(refName);
       console.log(element)
       element.scrollIntoView({ behavior: "smooth" })
+    },
+    showImage: function (sources) {
+      this.loadedPhotos = [sources]
+      this.toggler = !this.toggler
     }
   },
 };
 </script>
 <style scoped>
+.skillDiv {
+  text-align: center;
+  padding: 10px;
+  height: 200px;
+}
+
 .bg {
   background-image: url("/images/bg.png");
   background-size: cover;
@@ -295,7 +331,7 @@ export default {
 
 .second {
   width: 100%;
-  height: 400px;
+  /* height: 400px; */
   background: #181818;
   text-align: center;
   padding: 2rem 2rem;

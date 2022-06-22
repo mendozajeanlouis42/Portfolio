@@ -7,35 +7,51 @@
 
             <div class="first" v-if="index % 2 == 0">
                 <v-row>
-                    <v-col cols="12">
-                        <v-row>
-                            <v-col lg="5">
-                                <v-img :src="'/images/projects/' + featuredProject.image" contain
-                                    @click="showImage(index, '/images/projects/' + featuredProject.image)">
-                                </v-img>
-                            </v-col>
-                            <v-col lg="5" offset-lg="1">
-                                <div class="child bgColor1">
-                                    <v-icon color="#fe4652" x-large class="ml-3" dark style="display: inline;">
-                                        {{ featuredProject.icon }}
-                                    </v-icon>
-                                    <h3 class="white--text ml-3 mt-4" style="display: inline;">
-                                        {{ featuredProject.projectName }}</h3>
-                                    <v-row>
-                                        <v-col cols="2" v-for='(skills) in featuredProject.involved_languages'
-                                            :key='skills'>
-                                            <v-img :src="'images/skills/' + skills + '.svg'" contain max-height="62"
-                                                max-width="62">
-                                            </v-img>
-                                        </v-col>
+                    <v-col md="6" lg="6">
+                        <v-img :src="'/images/projects/' + featuredProject.image" contain max-height="400"
+                            @click="showImage(index, '/images/projects/' + featuredProject.image)">
+                        </v-img>
+                    </v-col>
 
+                    <v-col md="6" lg="6">
+                        <v-row>
+                            <v-col md="12" lg="8" offset-lg="2">
+                                <div class="child bgColor1">
+                                    <v-row>
+                                        <!-- Project Title -->
+                                        <v-col cols="12" style="text-align:center;">
+                                            <v-icon color="#fe4652" x-large class="ml-3 mb-5" dark
+                                                style="display: inline;">
+                                                {{ featuredProject.icon }}
+                                            </v-icon>
+                                            <h3 class="white--text ml-3 mt-4" style="display: inline;">
+                                                {{ featuredProject.projectName }}</h3>
+                                        </v-col>
+                                        <!-- Project Title -->
+
+                                        <!-- Programming Languages Used -->
+                                        <v-col class="progLanguage" cols="12">
+                                            <v-row class="justify-center">
+                                                <v-col md="2" v-for='(skills) in featuredProject.involved_languages'
+                                                    :key='skills'>
+                                                    <v-img :src="'images/skills/' + skills + '.svg'" contain
+                                                        max-height="40" max-width="40">
+                                                    </v-img>
+                                                </v-col>
+                                            </v-row>
+                                        </v-col>
+                                        <!-- Programming Languages Used -->
+
+                                        <!-- Project Description -->
+                                        <v-col cols="12">
+                                            <span class="grey--text ml-3 mt-6">
+                                                {{ featuredProject.description }}
+                                            </span>
+                                        </v-col>
+                                        <!-- Project Description -->
                                     </v-row>
-                                    <p class="grey--text ml-3 mt-6">
-                                        {{ featuredProject.description }}
-                                    </p>
                                 </div>
                             </v-col>
-                            <br />
                         </v-row>
                     </v-col>
                 </v-row>
@@ -43,42 +59,52 @@
 
             <div class="first" v-if="index % 2 != 0">
                 <v-row>
-                    <v-col cols="12">
+                    <v-col lg="5" md="6">
                         <v-row>
-                            <v-col lg="5" offset-lg="1">
+                            <v-col md="12" lg="10" offset-lg="2">
                                 <div class="child bgColor1">
-                                    <v-icon color="#fe4652" x-large class="ml-3" dark style="display: inline;">
-                                        {{ featuredProject.icon }}
-                                    </v-icon>
-                                    <h3 class="white--text ml-3 mt-4" style="display: inline;">
-                                        {{ featuredProject.projectName }}</h3>
                                     <v-row>
-                                        <v-col cols="2">
-                                            <v-img src="images/skills/jquery.svg" contain max-height="62"
-                                                max-width="62">
-                                            </v-img>
+                                        <!-- Project Title -->
+                                        <v-col cols="12" style="text-align:center;">
+                                            <v-icon color="#fe4652" x-large class="ml-3 mb-5" dark
+                                                style="display: inline;">
+                                                {{ featuredProject.icon }}
+                                            </v-icon>
+                                            <h3 class="white--text ml-3 mt-4" style="display: inline;">
+                                                {{ featuredProject.projectName }}</h3>
                                         </v-col>
-                                        <v-col cols="2">
-                                            <v-img src="images/skills/laravel.svg" contain max-height="62"
-                                                max-width="62">
-                                            </v-img>
+                                        <!-- Project Title -->
+
+                                        <!-- Programming Languages Used -->
+                                        <v-col class="progLanguage" cols="12">
+                                            <v-row class="justify-center">
+                                                <v-col md="2" v-for='(skills) in featuredProject.involved_languages'
+                                                    :key='skills'>
+                                                    <v-img :src="'images/skills/' + skills + '.svg'" contain
+                                                        max-height="30" max-width="30">
+                                                    </v-img>
+                                                </v-col>
+                                            </v-row>
                                         </v-col>
-                                        <v-col cols="2">
-                                            <v-img src="images/skills/angular.svg" contain max-height="62"
-                                                max-width="62">
-                                            </v-img>
+                                        <!-- Programming Languages Used -->
+
+                                        <!-- Project Description -->
+                                        <v-col cols="12">
+                                            <span class="grey--text ml-3 mt-6">
+                                                {{ featuredProject.description }}
+                                            </span>
                                         </v-col>
+                                        <!-- Project Description -->
                                     </v-row>
-                                    <p class="grey--text ml-3 mt-6">
-                                        {{ featuredProject.description }}
-                                    </p>
                                 </div>
                             </v-col>
-                            <v-col lg="5">
-                                <v-img class="" :src="'/images/projects/' + featuredProject.image" contain></v-img>
-                            </v-col>
-                            <br />
                         </v-row>
+                    </v-col>
+
+                    <v-col md="6" lg="6" offset-lg="1">
+                        <v-img :src="'/images/projects/' + featuredProject.image" contain max-height="400"
+                            @click="showImage(index, '/images/projects/' + featuredProject.image)">
+                        </v-img>
                     </v-col>
                 </v-row>
             </div>
@@ -125,7 +151,7 @@ export default {
 
 .first {
     width: 100%;
-    height: 400px;
+    height: 100%;
     background: linear-gradient(to right,
             #181818,
             #181818 50%,

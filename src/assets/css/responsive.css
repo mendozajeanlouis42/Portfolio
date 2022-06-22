@@ -1,0 +1,23 @@
+
+    .mobileNavbar{
+        display:none;
+    }
+@media screen and (min-device-width: 769px) and (max-device-width: 1024px) {
+    .grey--text {
+        font-size: 17px !important;
+    }
+
+  
+
+}
+@media screen and (min-device-width: 320px) and (max-device-width: 425px) {
+    .mobileNavbar{
+        display: inline;
+    }
+    .navbar{
+        display:none;
+    }
+    .skillDiv{
+        height: 350px !important;
+    }
+}
