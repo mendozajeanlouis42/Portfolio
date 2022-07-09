@@ -144,8 +144,8 @@
               </v-col>
               <v-col xs="1" sm="2" md="6" lg="6">
                 <p class="white--text">DRY Approach</p>
-                <v-img src="images/skills/dry.png" contain
-                  @click="showImage('images/skills/dry.png')"></v-img>
+                <v-img src="images/skills/dry.PNG" contain
+                  @click="showImage('images/skills/dry.PNG')"></v-img>
               </v-col>
             </v-row>
           </v-col>
@@ -297,7 +297,7 @@ export default {
 }
 
 .bg {
-  background-image: url("/images/bg.png");
+  background-image: url("/deployedportfolio/images/bg.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;
