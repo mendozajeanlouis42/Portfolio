@@ -8,7 +8,7 @@
             <div class="first" v-if="index % 2 == 0">
                 <v-row>
                     <v-col md="6" lg="6">
-                        <v-img :src="'/deployedportfolio/images/projects/' + featuredProject.image" contain max-height="400"
+                        <v-img :src="'/images/projects/' + featuredProject.image" contain max-height="400"
                             @click="showImage(index, '/images/projects/' + featuredProject.image)">
                         </v-img>
                     </v-col>
@@ -102,7 +102,7 @@
                     </v-col>
 
                     <v-col md="6" lg="6" offset-lg="1">
-                        <v-img :src="'/deployedportfolio/images/projects/' + featuredProject.image" contain max-height="400"
+                        <v-img :src="'/images/projects/' + featuredProject.image" contain max-height="400"
                             @click="showImage(index, '/images/projects/' + featuredProject.image)">
                         </v-img>
                     </v-col>
